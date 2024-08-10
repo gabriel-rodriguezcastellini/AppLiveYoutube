@@ -1,8 +1,16 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace AppLiveYoutube.ViewModels;
 
-internal class TestViewModel : ObservableObject
+internal partial class TestViewModel : ObservableObject
 {
-    public string Text { get; set; } = "Hole gente!!!";
+    [ObservableProperty]
+    private string? text;
+
+    [RelayCommand]
+    public void CambiarTexto()
+    {
+        Text = "Hola gente!!!";
+    }
 }
