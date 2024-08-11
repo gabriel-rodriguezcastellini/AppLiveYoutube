@@ -6,7 +6,7 @@ namespace AppLiveYoutube.ViewModels;
 internal partial class TestViewModel : ObservableObject
 {
     [ObservableProperty]
-    private string? text;
+    private string? _text;
 
     [RelayCommand]
     public void CambiarTexto()
